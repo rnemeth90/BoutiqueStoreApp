@@ -6085,19 +6085,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RyanNemeth\\.nuget\\packages\\": {}
+    "C:\\Users\\Ryan.Nemeth\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\BoutiqueStoreApp\\Product.API\\Merchandise.API.csproj",
+      "projectUniqueName": "C:\\repos\\BoutiqueStoreApp\\Merchandise.API\\Merchandise.API.csproj",
       "projectName": "Merchandise.API",
-      "projectPath": "C:\\repos\\BoutiqueStoreApp\\Product.API\\Merchandise.API.csproj",
-      "packagesPath": "C:\\Users\\RyanNemeth\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\BoutiqueStoreApp\\Product.API\\obj\\",
+      "projectPath": "C:\\repos\\BoutiqueStoreApp\\Merchandise.API\\Merchandise.API.csproj",
+      "packagesPath": "C:\\Users\\Ryan.Nemeth\\.nuget\\packages\\",
+      "outputPath": "C:\\repos\\BoutiqueStoreApp\\Merchandise.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RyanNemeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ryan.Nemeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6105,8 +6105,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://packagesource": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {

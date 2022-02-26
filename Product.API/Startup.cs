@@ -28,17 +28,22 @@ namespace Merchandise.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddDbContext<AppDbContext>(options => 
+            //                                    options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING")));
+
             services.AddDbContext<AppDbContext>(options =>
-                                                options.UseInMemoryDatabase("InMem"));
+                                                options.UseSqlServer(Configuration.GetConnectionString("SQLConnection")));  
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Product.API", Version = "v1" });
             });
+
+            services.AddMvc().AddXmlDataContractSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext dbContext)
         {
             if (env.IsDevelopment())
             {
@@ -46,6 +51,9 @@ namespace Merchandise.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product.API v1"));
             }
+
+            dbContext.Database.EnsureCreated();
+            //dbContext.Database.Migrate();
 
             app.UseHttpsRedirection();
 
@@ -57,6 +65,7 @@ namespace Merchandise.API
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

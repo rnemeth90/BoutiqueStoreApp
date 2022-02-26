@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "07f90635-2c36-460b-bd91-a0b68de7d239": {
+      "ProjectGuid": "07f90635-2c36-460b-bd91-a0b68de7d239",
+      "DisplayName": "Inventory.API",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
