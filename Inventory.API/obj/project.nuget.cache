@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YVyth0AL37t1LVVy/S6YN7j/ygkBbsMtAWMFJ/CXyDvxtFAiLqGAZiP/Yby6CilMKiksYxwy8YGrH5zH26FIGA==",
+  "dgSpecHash": "CAGIDSX1NZgv4FAxqoe4DADJw+Rfit5HpyNwNX9BXRJFy+TdIfPV0+OLyiYP9oxDOFGpERWtyrfJZZw/Noeo9A==",
   "success": true,
-  "projectFilePath": "C:\\repos\\training\\c-sharp\\Inventory.API\\Inventory.API\\Inventory.API.csproj",
+  "projectFilePath": "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryan.Nemeth\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Ryan.Nemeth\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

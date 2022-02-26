@@ -6063,11 +6063,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\training\\c-sharp\\Inventory.API\\Inventory.API\\Inventory.API.csproj",
+      "projectUniqueName": "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj",
       "projectName": "Inventory.API",
-      "projectPath": "C:\\repos\\training\\c-sharp\\Inventory.API\\Inventory.API\\Inventory.API.csproj",
+      "projectPath": "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj",
       "packagesPath": "C:\\Users\\Ryan.Nemeth\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\training\\c-sharp\\Inventory.API\\Inventory.API\\obj\\",
+      "outputPath": "C:\\repos\\BoutiqueApp\\Inventory.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ryan.Nemeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
