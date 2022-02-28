@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj": {}
+    "C:\\repos\\BoutiqueStoreApp\\Inventory.API\\Inventory.API.csproj": {}
   },
   "projects": {
-    "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj": {
+    "C:\\repos\\BoutiqueStoreApp\\Inventory.API\\Inventory.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj",
+        "projectUniqueName": "C:\\repos\\BoutiqueStoreApp\\Inventory.API\\Inventory.API.csproj",
         "projectName": "Inventory.API",
-        "projectPath": "C:\\repos\\BoutiqueApp\\Inventory.API\\Inventory.API.csproj",
-        "packagesPath": "C:\\Users\\Ryan.Nemeth\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\BoutiqueApp\\Inventory.API\\obj\\",
+        "projectPath": "C:\\repos\\BoutiqueStoreApp\\Inventory.API\\Inventory.API.csproj",
+        "packagesPath": "C:\\Users\\RyanNemeth\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\BoutiqueStoreApp\\Inventory.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ryan.Nemeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RyanNemeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "net5.0": {
