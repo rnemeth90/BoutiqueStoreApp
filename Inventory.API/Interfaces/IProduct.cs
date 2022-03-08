@@ -1,4 +1,4 @@
-﻿using Inventory.API.Interfaces;
+﻿using Inventory.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
-namespace Inventory.API.Models
+namespace Inventory.API.Interfaces
 {
-    public class Product : IProduct
+    public interface IProduct
     {
         [Key, Required]
         public Guid Id { get; }
@@ -35,30 +35,19 @@ namespace Inventory.API.Models
 
         public FormFile ProductImage { get; set; }
 
+        Task<IEnumerable<Product>> GetAllProducts();
+        
+        [HttpGet]
+        Task<Product> GetProduct(Guid productId);
+        
+        [HttpPost]
+        Task<IActionResult> Create();
 
-        public Task<IActionResult> Create()
-        {
-            throw new NotImplementedException();
-        }
+        [HttpPut]
+        Task<IActionResult> UpdateProduct([FromBody]Product product);
 
-        public Task<IActionResult> DeleteProduct(Guid productId)
-        {
-            throw new NotImplementedException();
-        }
+        [HttpDelete]
+        Task<IActionResult> DeleteProduct(Guid productId);
 
-        public Task<IEnumerable<Product>> GetAllProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Product> GetProduct(Guid productId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IActionResult> UpdateProduct([FromBody] Product product)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -3,6 +3,7 @@ using Inventory.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -28,7 +29,7 @@ namespace Inventory.API.Controllers
 
         // GET api/<InventoryController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get(Guid id)
         {
             return Ok(await _dbContext.Products.FindAsync(id));
         }
@@ -42,7 +43,7 @@ namespace Inventory.API.Controllers
 
         // PUT api/<InventoryController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Product product)
+        public async Task<IActionResult> Put(Guid id, [FromBody] Product product)
         {
             var p = _dbContext.Products.Find(id);
             if (p == null)
@@ -57,7 +58,7 @@ namespace Inventory.API.Controllers
 
         // DELETE api/<InventoryController>/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(Guid id)
         {
             Product p = await _dbContext.Products.FindAsync(id);
             if(p == null)
