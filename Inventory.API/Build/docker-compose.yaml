@@ -7,7 +7,7 @@ services:
             #args:
         environment:
         - ASPNETCORE_ENVIRONMENT=Development
-        - DB_CONNECTION_STRING=Server=db;Database=Product;User=sa;Password=1Secure*Password1
+        - DB_CONNECTION_STRING=Server=db;Database=InventoyApiDb;User=sa;Password=1Secure*Password1
         ports:
         - "5002:80"
         depends_on:

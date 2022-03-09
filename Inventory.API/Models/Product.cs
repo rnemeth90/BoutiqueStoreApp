@@ -4,14 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 
 namespace Inventory.API.Models
 {
-    public class Product : IProduct
+    public class Product
     {
-        [Key, Required]
-        public Guid Id { get; }
+        [Key]
+        [Required]
+        public Guid Id { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -33,32 +35,7 @@ namespace Inventory.API.Models
         [Required]
         public string Model { get; set; }
 
-        public FormFile ProductImage { get; set; }
-
-
-        public Task<IActionResult> Create()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IActionResult> DeleteProduct(Guid productId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Product>> GetAllProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Product> GetProduct(Guid productId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IActionResult> UpdateProduct([FromBody] Product product)
-        {
-            throw new NotImplementedException();
-        }
+        [NotMapped]
+        public IFormFile ProductImage { get; set; }
     }
 }

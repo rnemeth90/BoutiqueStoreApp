@@ -10,7 +10,7 @@ namespace ShoppingCart.API.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer(@"Server = (localdb)\MSSQLLocalDB; Database = ShoppingCartApiDb;");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Inventory.API.Data;
+using Inventory.API.Interfaces;
 using Inventory.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,60 +14,46 @@ namespace Inventory.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private AppDbContext _dbContext;
+        private IProduct _productService;
 
-        public ProductController(AppDbContext dbContext)
+        public ProductController(IProduct productService)
         {
-            _dbContext = dbContext;
+            _productService = productService;
         }
 
         // GET: api/<InventoryController>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IEnumerable<Product>> Get()
         {
-            return Ok(await _dbContext.Products.ToListAsync());
+            return await _productService.GetAllProducts();   
         }
 
         // GET api/<InventoryController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<Product> Get(Guid id)
         {
-            return Ok(await _dbContext.Products.FindAsync(id));
+            return await _productService.GetProduct(id);    
         }
 
         // POST api/<InventoryController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Product product)
         {
-            return Ok(await _dbContext.AddAsync(product));
+            return await _productService.Create(product);
         }
 
         // PUT api/<InventoryController>/5
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(Guid id, [FromBody] Product product)
         {
-            var p = _dbContext.Products.Find(id);
-            if (p == null)
-                return BadRequest();
-            else
-                p.Name = product.Name;
-                p.Manufacturer = product.Manufacturer;
-                p.Model = product.Model;
-                await _dbContext.SaveChangesAsync();
-                return Ok(StatusCodes.Status200OK);
+            return await _productService.UpdateProduct(id, product);    
         }
 
         // DELETE api/<InventoryController>/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public Task<IActionResult> Delete(Guid id)
         {
-            Product p = await _dbContext.Products.FindAsync(id);
-            if(p == null)
-                return NotFound();
-            else
-                _dbContext.Remove(p);
-                _dbContext.SaveChanges(true);
-                return Ok($"Product {p.Id} removed");
+            return _productService.DeleteProduct(id);   
         }
     }
 }
