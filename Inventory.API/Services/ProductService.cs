@@ -38,6 +38,7 @@ namespace Inventory.API.Services
                 return Ok(StatusCodes.Status404NotFound);
             else
                 _dbContext.Products.Remove(product);
+                await _dbContext.SaveChangesAsync();
             return Ok(StatusCodes.Status200OK);
         }
 
